@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang = "en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width"/>
+        <title> Blackjack </title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="blackjack.js" defer></script>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <h1>Blackjack Simulator</h1>
+    <body>
+        This is a basic Blackjack simulator I coded up for the Winter Hackathon 2024. Hopefully you enjoy ^^
+        <hr/>
+        <div id="gameBoard">
+            <div class="column" id="playArea">
+                <button id="hit">
+                    <label> Hit </label>
+                </button><br/>
+                <button id="stay">
+                    <label> Stay </label>
+                </button><br/>
+                <button id="reset">
+                    <label> Reset </label>
+                </button>
+            </div>
+            <div class="column">
+                <form id="chatForm">
+                    <label for="chatInput"> Type Message Here... </label><br/>
+                    <input type="text" id="chatInput" /> </form>
+                </form>
+                <ul id="chatArea">
+                </ul>
+            </div>
+            <div class="column" id="statsArea">
+                <form id="bettingForm">
+                    <label for="bettingInput"> Place your bet! </label><br/>
+                    <input type="number" id="bettingInput"> 
+                </form>
+                <label for="bets"> Bets: </label><br/>
+                <ul id="bets">
+                </ul>
+                <label for="totals"> Totals: </label><br/>
+                <ul id="totals">
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
